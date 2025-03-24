@@ -1,14 +1,19 @@
-import './App.css';
-import TotalVotes from './components/TotalVotes';
+import React from "react";
+import VotingApp from "./components/VotingApp";
+import VotingProvider from "./context/VotingProvider";
+import ModalProvider from "./context/ModalProvider";
+import styles from "./App.module.css";
 
-function App() {
-
+const App = () => {
   return (
-    <div>
-      <h1>Class Monitor Vote</h1>
-      <TotalVotes />
-    </div>
-  )
-}
+    <VotingProvider>
+      <ModalProvider>
+        <div className={styles.container}>
+          <VotingApp />
+        </div>
+      </ModalProvider>
+    </VotingProvider>
+  );
+};
 
-export default App
+export default App;
