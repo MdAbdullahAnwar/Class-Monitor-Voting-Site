@@ -3,7 +3,7 @@ import { VotesContext } from "../context/VotingProvider";
 import { ModalContext } from "../context/ModalProvider";
 import CandidateList from "./CandidateList";
 import VoteModal from "./VoteModal";
-// import Result from "./Result";
+import Result from "./Result";
 import styles from "./VotingApp.module.css";
 
 const VotingApp = () => {
@@ -18,7 +18,7 @@ const VotingApp = () => {
         <h3>Total Votes: {votes.totalVotes}</h3>
         <button onClick={() => setIsOpen(true)} className={styles.voteButton}>Add New Vote</button>
         <CandidateList />
-        {/* <Result /> */}
+        <Result />
       </div>
     </Fragment>
   );

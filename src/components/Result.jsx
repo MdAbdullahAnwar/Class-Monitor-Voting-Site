@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { VotesContext } from "../context/VotingProvider";
 import styles from "./Result.module.css";
 
 const Result = () => {
   const { votes } = useContext(VotesContext);
+  const [showResult, setShowResult] = useState(false);
 
   const getWinner = () => {
     const candidates = votes.candidates;
@@ -22,7 +23,21 @@ const Result = () => {
     return `Winner is ${winners[0]}`;
   };
 
-  return <h3 className={styles.result}>{getWinner()}</h3>;
+  return (
+    <div className={styles.resultContainer}>
+      <button 
+        className={styles.showResultButton}
+        onClick={() => setShowResult(!showResult)}
+      >
+        {showResult ? "Hide Result" : "Show Result"}
+      </button>
+      {showResult && (
+        <div className={styles.resultText}>
+          {getWinner()}
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default Result;

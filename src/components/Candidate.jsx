@@ -8,7 +8,7 @@ const Candidate = ({ name }) => {
   return (
     <div className={styles.candidate}>
       <h2>{name}</h2>
-      <p>Total: {votes.candidates[name].length}</p>
+      <p>Total Votes for {name}: {votes.candidates[name].length}</p>
       <ul>
         {votes.candidates[name].map((voter, index) => (
           <li key={index}>

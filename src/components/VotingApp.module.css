@@ -1,14 +1,35 @@
-/* .container {
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .container h1 {
+    color: #2c3e50;
     text-align: center;
-    margin-top: 20px;
-}
-
-.voteButton {
-    margin-top: 10px;
-    padding: 10px 15px;
-    background: blue;
+    margin-bottom: 1rem;
+  }
+  
+  .container h3 {
+    color: #7f8c8d;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .voteButton {
+    display: block;
+    width: 200px;
+    margin: 0 auto 2rem;
+    padding: 0.8rem;
+    background-color: #2ecc71;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
+    font-size: 1rem;
     cursor: pointer;
-} */
+    transition: background-color 0.2s;
+  }
+  
+  .voteButton:hover {
+    background-color: #27ae60;
+  }

@@ -1,7 +1,13 @@
-/* .container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-} */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fff6f6 0%, #ffdfd3 100%);
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+  }
